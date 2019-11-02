@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# script that displays
+i=0
+com=$(ls)
+for i in $com;
+do
+	echo "${i:2}"
+done
