@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
-i=0
-while [  $i -lt 10 ];
+i=1
+string="Holberton School"
+while ((i <= 10))
 do
-	if [ $i -eq 4 ]
+	if ((i ==  4))
 	then
 		echo "bad luck"
-	elif [ $i -eq 8 ]
+	elif ((i == 8))
 	then
 		echo "good luck"
 	else
-		echo "Holberton School"
+		echo "$string"
 	fi
-	let i=i+1
+	((i++))
 done
