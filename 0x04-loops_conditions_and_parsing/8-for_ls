@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # script that displays
-$i
-com=$(ls)
-for i in $com;
+for i in *
 do
-	echo "${i:2}"
+	echo "$i" | cut -d "-" -f2
 done
