@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # script that displays
-i=0
+$i
 com=$(ls)
 for i in $com;
 do
