@@ -2,7 +2,7 @@
 # print clock 12 hours 
 
 hours=0
-while [  $hours -lt 12 ];
+while [  $hours -le 12 ];
 do
 	echo "Hour: $hours"
 	min=1
