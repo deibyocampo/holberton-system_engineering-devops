@@ -1,0 +1,3 @@
+#/usr/bin/bash
+# is command is network statistics
+netstat -lp
