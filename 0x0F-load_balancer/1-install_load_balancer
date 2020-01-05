@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # Install HAProxy with round robin balancing algorithm
+
 sudo apt-get install -y software-properties-common
 sudo add-apt-repository -y ppa:vbernat/haproxy-1.6
 sudo apt-get -y update
 sudo apt-get -y install haproxy=1.6.\*
-sudo sed -i "20 i\\nfrontend my_front\n\tbind *:80\n\tdefault_backend my_back" /etc/haproxy/haproxy.cfg
+sudo sed -i "20 i\ \nfrontend my_front\n\tbind *:80\n\tdefault_backend my_back" /etc/haproxy/haproxy.cfg
 sudo sed -i "25 i\\backend my_back\n\tbalance roundrobin\n\tmode http\n\tserver 968-web-01 35.243.213.140\n\tserver 968-web-02 34.73.54.82\n" /etc/haproxy/haproxy.cfg
-sudo service haproxy restart
+sudo service haproxy start
