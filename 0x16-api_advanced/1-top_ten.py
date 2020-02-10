@@ -9,7 +9,7 @@ def top_ten(subreddit):
     """
     returns the numbers of subscribers
     """
-    url = 'http://www.reddit.com/r/{}/hot.json'.format(subreddit)
+    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     user_agent = {'User-Agent': 'together'}
     req = requests.get(url, headers=user_agent, allow_redirects=False,
                        params={'limit': 10})
