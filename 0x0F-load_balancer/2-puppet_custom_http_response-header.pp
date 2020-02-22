@@ -1,4 +1,4 @@
-#!/ust/bin/env bash
+#!/usr/bin/env bash
 #puppet manifest to install a nginx server
 exec {'http header':
 command => 'sudo apt -y update && sudo apt -y install nginx && 
